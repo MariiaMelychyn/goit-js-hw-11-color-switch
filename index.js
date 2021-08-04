@@ -8,12 +8,30 @@ const colors = [
   ];
 
 
+const refs = {
+    body: document.body,
+    buttonSrart: document.querySelector('button [data-action="start"]'),
+    buttonStop: document.querySelector('button [data-action="stop"]'),
+}
 
 
+const INTERVAL_DELAY = 1000;
+let intervalId = null;
 
 
+refs.buttonSrart.addEventListener('click', changeColor);
+refs.buttonStop.addEventListener('click', onButtonStop);
 
 
-  const randomIntegerFromInterval = (min, max) => {
+const randomIntegerFromInterval = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1) + min);
-  };
+};
+
+function changeColor (){
+
+};
+
+
+function onButtonStop (){
+    
+}
