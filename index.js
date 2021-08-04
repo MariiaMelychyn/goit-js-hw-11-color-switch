@@ -10,7 +10,7 @@ const colors = [
 
 const refs = {
     body: document.body,
-    buttonSrart: document.querySelector('button [data-action="start"]'),
+    buttonStart: document.querySelector('button [data-action="start"]'),
     buttonStop: document.querySelector('button [data-action="stop"]'),
 }
 
@@ -28,10 +28,14 @@ const randomIntegerFromInterval = (min, max) => {
 };
 
 function changeColor (){
-
+    intervalId = setInterval(() => {
+        refs.body.style.backgroundColor = colors[randomIntegerFromInterval(0, colors.length - 1)];
+    }, INTERVAL_DELAY);
+    refs.buttonStart.disabled = true;
 };
 
 
 function onButtonStop (){
-    
+    clearInterval(intervalId);
+    refs.buttonStart.disabled = false;
 }
