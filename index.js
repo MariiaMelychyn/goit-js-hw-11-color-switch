@@ -10,8 +10,8 @@ const colors = [
 
 const refs = {
     body: document.body,
-    buttonStart: document.querySelector('button [data-action="start"]'),
-    buttonStop: document.querySelector('button [data-action="stop"]'),
+    buttonStart: document.querySelector('button[data-action="start"]'),
+    buttonStop: document.querySelector('button[data-action="stop"]'),
 }
 
 
@@ -19,7 +19,7 @@ const INTERVAL_DELAY = 1000;
 let intervalId = null;
 
 
-refs.buttonSrart.addEventListener('click', changeColor);
+refs.buttonStart.addEventListener('click', changeColor);
 refs.buttonStop.addEventListener('click', onButtonStop);
 
 
